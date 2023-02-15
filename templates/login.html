@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Login</title>
+</head>
+<body class="loggedin">
+<div class="navbarArea">
+  <div class="logo">
+    <a href="/home"><img src="/static/mainLogo.png" style="cursor: pointer;" width="100px" alt="">
+    </a>
+  </div>
+  <div class="logotitle">
+    <h4 style="color: #fff;">Learning Zone</h4>
+  </div>
+</div>
+<html>
+
+      
+<div class="containerForm">
+    <div class="formArea">
+      <h2 style="text-align:center">Log <span>in</span> </h2>
+      <form method="POST" action="/logging">
+        <div class="form-group">
+          <label for="emailAdd">Email address</label>
+          <input type="email" name="email" class="form-control" id="emailAdd" aria-describedby="emailHelp" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+          {% if user %}
+          <h4 style="color: red; font-size: 14px" >You are not Register. Please Register your account</h4>
+
+          {% endif %}
+        </div>
+        <p>If you are not register. Please <a href="/regis">signup</a> </p>
+        <div class="submitbtnlogin">
+          <button type="submit" class="btn btn-outline-dark" c>Log In</button>
+        </div>
+        
+      </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   
+</body>
+</html>

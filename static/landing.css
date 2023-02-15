@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+  .d-flex {
+      gap: 25px;
+    }
+  nav.navbar.navbar-expand-lg {
+      /* background: linear-gradient(45deg, #522c2c, #020232); */
+      background: linear-gradient(45deg, #0a0b0d, #050133);
+  }
+.card{
+    margin: 8px 0px;
+}
